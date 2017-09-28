@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Arcus</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../less/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+          <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Arcus</a>
+            </div>
+            <!-- /.navbar-header -->
+
+             <ul class="nav navbar-top-links navbar-right">
+              <li class="dropdown">
+                     <a href="dashboard.html"><i class="fa fa-sign-in fa-fw"></i> Go Back</a>
+                </li>
+           
+                <li class="dropdown">
+                      <a class="nickname" href="personal.html">
+                       
+                    </a>
+                  
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <input type="button" class="btn btn-primary next" onclick="javascript:location.href=('https://arcusgroup.slack.com/')" value="Slack">
+							 
+							</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                         <li>
+                            <a href="#">
+                            <input type="button" class="btn btn-primary next" onclick="javascript:location.href=('https://www.dropbox.com/work/arcus%20Team%20Folder')" value="Dropbox">
+						</a>
+                        </li>
+                         <li class="divider"></li>
+                          <li>
+                            <a href="#">
+                            <input type="button" class="btn btn-primary next" onclick="javascript:location.href=('https://github.com/organizations/cloudarcus/')" value="Github">
+							</a>
+                        </li>
+                       
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+               
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                 <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="http://34.201.120.105:80/pages/index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                       
+                        <li>
+                            <a href="http://34.201.120.105:80/pages/employee.html"><i class="fa fa-search fa-fw"></i> Search</a>
+                        </li>
+                        
+                         <li>
+                            <a href="http://34.201.120.105:80/pages/helpdesk.html"><i class="fa fa-laptop fa-fw"></i> Helpdesk</a>
+                        </li>
+                       
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Performance<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="http://34.201.120.105:80/pages/personal.html"><i class="fa fa-smile-o fa-fw"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="http://34.201.120.105:80/pages/professional.html"><i class="fa fa-briefcase fa-fw"></i> Professional</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                       
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                       
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href="#home-pills" data-toggle="tab">Home</a>
+                                </li>
+                                <li><a href="#profile-pills" data-toggle="tab">Profile</a>
+                                </li>
+                                
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content" ng-app="app" ng-controller="home as home">
+                                <div class="tab-pane fade in active" id="home-pills">
+                                     <div class="container" ng-show="!home.authenticated">
+		With Fitbit: <a href="/login">click here</a>
+	</div>
+
+													<div class="row">
+												                <div class="col-lg-3 col-md-6">
+												                    <div class="panel panel-primary">
+												                        <div class="panel-heading">
+												                            <div class="row">
+												                                <div class="col-xs-3">
+												                                    <i class="fa fa-comments fa-5x"></i>
+												                                </div>
+												                                <div class="col-xs-9 text-right">
+												                                    <div class="huge"><span ng-bind="home.goalSteps"></span></div>
+												                                    <div>Goal Steps</div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                        <a href="#">
+												                            <div class="panel-footer">
+												                                <span class="pull-left">View Details</span>
+												                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+												                                <div class="clearfix"></div>
+												                            </div>
+												                        </a>
+												                    </div>
+												                </div>
+												                <div class="col-lg-3 col-md-6">
+												                    <div class="panel panel-green">
+												                        <div class="panel-heading">
+												                            <div class="row">
+												                                <div class="col-xs-3">
+												                                    <i class="fa fa-tasks fa-5x"></i>
+												                                </div>
+												                                <div class="col-xs-9 text-right">
+												                                    <div class="huge"><span ng-bind="home.goalcaloriesOut"></span></div>
+												                                    <div>Goal Calories out</div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                        <a href="#">
+												                            <div class="panel-footer">
+												                                <span class="pull-left">View Details</span>
+												                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+												                                <div class="clearfix"></div>
+												                            </div>
+												                        </a>
+												                    </div>
+												                </div>
+												                <div class="col-lg-3 col-md-6">
+												                    <div class="panel panel-yellow">
+												                        <div class="panel-heading">
+												                            <div class="row">
+												                                <div class="col-xs-3">
+												                                    <i class="fa fa-shopping-cart fa-5x"></i>
+												                                </div>
+												                                <div class="col-xs-9 text-right">
+												                                    <div class="huge"><span ng-bind="home.goalDistance"></span></div>
+												                                    <div>Goal  Distance</div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                        <a href="#">
+												                            <div class="panel-footer">
+												                                <span class="pull-left">View Details</span>
+												                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+												                                <div class="clearfix"></div>
+												                            </div>
+												                        </a>
+												                    </div>
+												                </div>
+												                <div class="col-lg-3 col-md-6">
+												                    <div class="panel panel-yellow">
+												                        <div class="panel-heading">
+												                            <div class="row">
+												                                <div class="col-xs-3">
+												                                    <i class="fa fa-shopping-cart fa-5x"></i>
+												                                </div>
+												                                <div class="col-xs-9 text-right">
+												                                    <div class="huge"><span ng-bind="home.goalFloors"></span></div>
+												                                    <div>Goal Floor</div>
+												                                </div>
+												                            </div>
+												                        </div>
+												                        <a href="#">
+												                            <div class="panel-footer">
+												                                <span class="pull-left">View Details</span>
+												                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+												                                <div class="clearfix"></div>
+												                            </div>
+												                        </a>
+												                    </div>
+												                </div>
+												                
+												            </div>
+                                				
+                               
+                               
+                               
+                               
+                               
+                                </div>
+                                <div class="tab-pane fade" id="profile-pills">
+                                    <h4>Profile Tab</h4>
+                                
+                                </div>
+                                 
+                               
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+            
+            <!-- /.row -->
+           
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+
+
+	<script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module("app", []).controller("home", function($http) {
+			var self = this;
+
+			$http.get("/user").success(function(data) {
+				self.user = data.userAuthentication.details.user.fullName;
+				self.authenticated = true;
+			}).error(function() {
+				self.user = "N/A";
+				self.authenticated = false;
+			});
+
+			$http.get("/lifetime-activity").success(function(data) {
+				self.lifetimeSteps = data.steps.toLocaleString();
+				self.lifetimeFloors = data.floors.toLocaleString();
+				self.lifetimeDistance = data.distance.toLocaleString();
+				
+			}).error(function() {
+				self.lifetimeSteps = "N/A";
+			});
+			
+			$http.get("/activity-goal").success(function(data) {
+				self.goalSteps = data.steps.toLocaleString();
+				self.goalFloors = data.floors.toLocaleString();
+				self.goalDistance = data.distance.toLocaleString();
+				self.goalcaloriesOut = data.caloriesOut.toLocaleString();
+			}).error(function() {
+				self.lifetimeSteps = "N/A";
+			});
+			
+			$http.get("/daily-activity").success(function(data) {
+				self.dailyCalories = data.caloriesOut.toLocaleString();
+				
+			}).error(function() {
+				self.lifetimeSteps = "N/A";
+			});
+			
+			
+			$http.get("/weight-goal").success(function(data) {
+				self.startWeight = data.startWeight.toLocaleString();
+				self.weight = data.weight.toLocaleString();
+				 
+			}).error(function() {
+				self.startWeight = "N/A";
+			});
+			
+
+			$http.get("/fat-goal").success(function(data) {
+				self.fat = data.fat.toLocaleString();
+			}).error(function() {
+				self.fat = "N/A";
+			});
+		});
+	</script>
+</body>
+
+</html>
