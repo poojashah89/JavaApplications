@@ -1,8 +1,8 @@
 security:
   oauth2:
     client:
-      clientId: 2288XF
-      clientSecret: 9881a0b1b8030ba83f04bc7e14716bde
+      clientId: 
+      clientSecret: 
       accessTokenUri: https://api.fitbit.com/oauth2/token
       userAuthorizationUri: https://www.fitbit.com/oauth2/authorize
       tokenName: oauth_token
