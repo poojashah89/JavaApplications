@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="e1" class="co.spring.Employee" scope="prototype">
+        <!-- setter injection using the nested <ref/> element -->
+        <property name="id" value="3"></property>
+        <property name="name" value="pooja"/>
+        <property name="salary" value="100"/>
+        <property name="dept" value="HR"/>
+        <property name="email" value="shah@gmail.com"/>
+    </bean>
+    
+     <bean id="e2" class="co.spring.Employee">
+        <!-- setter injection using the nested <ref/> element -->
+        <property name="id" value="23"></property>
+        <property name="name" value="po1oja"/>
+        <property name="salary" value="100"/>
+        <property name="dept" value="HR"/>
+        <property name="email" value="shah@gmail.com"/>
+    </bean>
+
+</beans>
